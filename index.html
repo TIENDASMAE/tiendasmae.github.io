@@ -1,41 +1,24 @@
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La Tiendita SMAE</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div id="login-section">
-        <h2>Acceso privado</h2>
-        <input type="password" id="password" placeholder="Ingresá la contraseña">
-        <button onclick="login()">Entrar</button>
-    </div>
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyAZW5REsjgpT2RBUk1pNCiIcrB7e99H8sY",
+  authDomain: "la-tiendita-smae.firebaseapp.com",
+  projectId: "la-tiendita-smae",
+  storageBucket: "la-tiendita-smae.firebasestorage.app",
+  messagingSenderId: "173025970291",
+  appId: "1:173025970291:web:6d0e5652b1e7a2ffd18206",
+  measurementId: "G-YSYPV0R3CS"
+};
 
-    <div id="main-content" style="display:none;">
-        <header>
-            <h1>La Tiendita SMAE</h1>
-            <nav>
-                <a href="#">Inicio</a>
-                <a href="#">Productos</a>
-                <a href="#">Contacto</a>
-            </nav>
-        </header>
-        <section>
-            <h2>Bienvenidos</h2>
-            <p>¡Explorá nuestros productos y hacé tu pedido!</p>
-        </section>
-        <footer>
-            <p>Contactanos:</p>
-            <a href="https://wa.me/541133726139" target="_blank">WhatsApp Sebastián</a> |
-            <a href="https://wa.me/541133017665" target="_blank">WhatsApp Martina</a> |
-            <a href="https://www.facebook.com/sebaelpapu@hotmail.com.ar" target="_blank">Facebook Sebastián</a> |
-            <a href="https://www.facebook.com/martinaramirez90@hotmail.com.ar" target="_blank">Facebook Martina</a>
-        </footer>
-    </div>
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+Actualización con configuración Firebase
 
-    <script src="script.js"></script>
-</body>
-</html>
+ 
