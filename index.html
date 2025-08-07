@@ -1,34 +1,45 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>La Tiendita SMAE</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Tiendita SMAE</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>La Tiendita SMAE</h1>
-    <p class="slogan">Calidad y confianza a un clic</p>
-  </header>
-
-  <main id="product-list">
-    <h2>Productos</h2>
-    <!-- Productos cargados dinámicamente acá -->
-  </main>
-
-  <footer>
-    <p>Contactanos:</p>
-    <div class="contactos">
-      <a href="https://wa.me/5491133726139" target="_blank">WhatsApp Sebastián</a>
-      <a href="https://wa.me/5491133017665" target="_blank">WhatsApp Martina</a>
-      <a href="https://facebook.com/sebaelpapu@hotmail.com.ar" target="_blank">Facebook Sebastián</a>
-      <a href="https://facebook.com/martinaramirez90@hotmail.com.ar" target="_blank">Facebook Martina</a>
-      <a href="https://instagram.com/sebacano.ok" target="_blank">Instagram Sebastián</a>
-      <a href="https://instagram.com/maria.martina.ramirez" target="_blank">Instagram Martina</a>
-    </div>
-  </footer>
-
-  <script src="main.js"></script>
+    <header>
+        <h1>La Tiendita SMAE</h1>
+        <p class="slogan">Calidad y confianza a un clic</p>
+        <nav>
+            <a href="#" onclick="openContactMenu()">📲 Contacto</a>
+        </nav>
+        <div id="contactMenu" class="contact-menu">
+            <p onclick="window.open('https://wa.me/541133726139', '_blank')">📲 Hablar con Sebastián</p>
+            <p onclick="window.open('https://wa.me/541133017665', '_blank')">📲 Hablar con Martina</p>
+        </div>
+    </header>
+    <main>
+        <section id="product-form-section">
+            <h2>Cargar producto</h2>
+            <form id="product-form">
+                <input type="text" id="product-name" placeholder="Nombre del producto" required>
+                <input type="text" id="product-price" placeholder="Precio" required>
+                <input type="text" id="product-image" placeholder="URL de la imagen" required>
+                <button type="submit">Agregar producto</button>
+            </form>
+        </section>
+        <section id="product-list">
+            <h2>Productos</h2>
+            <div id="products-container"></div>
+        </section>
+    </main>
+    <footer>
+        <p>Seguinos en Instagram: 
+            <a href="https://instagram.com/sebacano.ok" target="_blank">@sebacano.ok</a> | 
+            <a href="https://instagram.com/maria.martina.ramirez" target="_blank">@maria.martina.ramirez</a>
+        </p>
+        <p>&copy; 2025 La Tiendita SMAE</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
